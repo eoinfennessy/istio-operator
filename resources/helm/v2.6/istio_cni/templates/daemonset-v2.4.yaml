@@ -107,7 +107,7 @@ spec:
                 ;;
                 *)
                   sourcebin=/opt/cni/bin/istio-cni-rhel9
-                  echo "WARNING: The host OS is not supported in FIPS-compliant environments; falling back to istio-cni binary compiled on latest RHEL version: sourcebin=${sourcebin}"
+                  echo "INFO: Running in a non-FIPS compliant environment; using istio-cni binary compiled with latest RHEL version: sourcebin=${sourcebin}"
                 ;;
               esac
 
