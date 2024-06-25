@@ -97,7 +97,6 @@ spec:
               esac
 
               # Select the appropriate CNI binary to copy based on the OS version
-              sourcebin=
               case "${rhelmajor}" in
                 8)
                   sourcebin=/opt/cni/bin/istio-cni-rhel8
@@ -107,7 +106,7 @@ spec:
                 ;;
                 *)
                   sourcebin=/opt/cni/bin/istio-cni-rhel9
-                  echo "WARNING: RHEL major version rhelmajor=${rhelmajor} is unsupported; falling back to istio-cni binary compiled on latest RHEL version: sourcebin=${sourcebin}"
+                  echo "WARNING: The host OS is not supported in FIPS-compliant environments; falling back to istio-cni binary compiled on latest RHEL version: sourcebin=${sourcebin}"
                 ;;
               esac
 
